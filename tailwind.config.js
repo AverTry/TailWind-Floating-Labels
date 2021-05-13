@@ -1,10 +1,11 @@
 module.exports = {
+  mode: 'jit',
   purge: {
-    enabled: true, // or true to purge unused css
+    // enabled: false, // or true to purge unused css
     preserveHtmlElements: false,
     content: ['dist/*.html'], // files checked for purging
   },
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       transformOrigin: {
