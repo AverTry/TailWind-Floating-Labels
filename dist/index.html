@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/tailwind.css">
   <title>Tailwind Input Label Floats</title>
   <style>
-  /* Remove scrollbars from page and inputs */
+    /* Remove scrollbars from page and inputs */
     ::-webkit-scrollbar {
       width: 0 !important;
       scrollbar-width: none;
@@ -22,11 +23,11 @@
     <form autocomplete="off" class="bg-gray-700 -z-1 max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
       <h2 class="text-2xl font-bold text-center">Floating Labels</h2>
       <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
-        <input type="datetime-local" name="datetime" placeholder=" " class="block p-4 ml-1 w-full pr-7 text-lg appearance-none focus:outline-none bg-transparent" />
+        <input type="datetime-local" name="datetime" placeholder=" " class="block p-4 w-full pr-7 text-lg appearance-none focus:outline-none bg-transparent" />
         <label for="datetime" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0 rounded-full">Datetime</label>
       </div>
       <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-full">
-        <input type="search" name="search" placeholder=" " class="block p-2 ml-3 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent" />
+        <input type="search" name="search" placeholder=" " class="block p-2 pl-4 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent" />
         <label for="search" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Search</label>
       </div>
       <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
@@ -34,7 +35,7 @@
         <label for="color" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Color</label>
       </div>
       <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
-        <input type="text" list="datalist" placeholder=" " class="block p-4 ml-1 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent" />
+        <input type="text" list="datalist" placeholder=" " class="block p-4 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent" />
         <datalist id="datalist">
           <option value="One"></option>
           <option value="Two"></option>
@@ -43,7 +44,7 @@
         <label for="datalist" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Data List</label>
       </div>
       <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
-        <select type="text" name="selectbox" placeholder="986-98265-9865-918346-9" class="block p-4 ml-1 w-full pr-7 text-lg appearance-none focus:outline-none bg-transparent">
+        <select type="text" name="selectbox" placeholder="986-98265-9865-918346-9" class="block p-4 w-full pr-7 text-lg appearance-none focus:outline-none bg-transparent">
           <option value="One">One</option>
           <option value="Two">Two</option>
           <option value="Three">Three</option>
@@ -51,7 +52,7 @@
         <label for="selectbox" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Select Box</label>
       </div>
       <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
-        <textarea type="password" name="textarea" placeholder=" " class="block p-2 ml-3 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent"></textarea>
+        <textarea type="password" name="textarea" placeholder=" " class="block p-2 w-full pr-7 pl-4 text-lg appearance-none focus:outline-none bg-transparent"></textarea>
         <label for="textarea" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Text Area</label>
       </div>
     </form>

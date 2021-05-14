@@ -1,13 +1,16 @@
 module.exports = {
   mode: 'jit',
   purge: {
-    // enabled: false, // or true to purge unused css
+    enabled: false, // or true to purge unused css
     preserveHtmlElements: false,
     content: ['dist/*.html'], // files checked for purging
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter"],
+      },
       transformOrigin: {
         "0": "0%",
       },
@@ -21,7 +24,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("tailwindcss"),
-    require("autoprefixer")
+    require("tailwindcss")
   ],
 }
