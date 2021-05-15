@@ -24,6 +24,10 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("tailwindcss")
+    require("tailwindcss"),
+    require('@tailwindcss/forms'),
   ],
+  corePlugins: {
+    appearance: false,
+  }
 }

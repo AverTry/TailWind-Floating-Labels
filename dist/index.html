@@ -19,57 +19,82 @@
 
 <body class="antialiased text-white bg-gray-800 p-10">
 
-  <container>
-    <form autocomplete="off" class="bg-gray-700 -z-1 max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
-      <h2 class="text-2xl font-bold text-center">Floating Labels</h2>
-      <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
-        <input type="datetime-local" name="datetime" placeholder=" " class="block p-4 w-full pr-7 text-lg appearance-none focus:outline-none bg-transparent" />
-        <label for="datetime" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0 rounded-full">Datetime</label>
-      </div>
-      <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-full">
-        <input type="search" name="search" placeholder=" " class="block p-2 pl-4 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent" />
-        <label for="search" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Search</label>
-      </div>
-      <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
-        <input type="color" name="color" placeholder=" " class="block m-3 w-full pr-7 appearance-none focus:outline-none bg-transparent" />
-        <label for="color" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Color</label>
-      </div>
-      <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
-        <input type="text" list="datalist" placeholder=" " class="block p-4 w-full pr-7  text-lg appearance-none focus:outline-none bg-transparent" />
-        <datalist id="datalist">
-          <option value="One"></option>
-          <option value="Two"></option>
-          <option value="Three"></option>
-        </datalist>
-        <label for="datalist" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Data List</label>
-      </div>
-      <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
-        <select type="text" name="selectbox" placeholder="986-98265-9865-918346-9" class="block p-4 w-full pr-7 text-lg appearance-none focus:outline-none bg-transparent">
-          <option value="One">One</option>
-          <option value="Two">Two</option>
-          <option value="Three">Three</option>
-        </select>
-        <label for="selectbox" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Select Box</label>
-      </div>
-      <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
-        <textarea type="password" name="textarea" placeholder=" " class="block p-2 w-full pr-7 pl-4 text-lg appearance-none focus:outline-none bg-transparent"></textarea>
-        <label for="textarea" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Text Area</label>
-      </div>
-    </form>
+
+  <container class="flex justify-evenly">
+    <div>
+      <form autocomplete="off" class="bg-gray-700 -z-1 max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
+        <h2 class="text-2xl font-bold text-center">Floating Labels</h2>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-full">
+          <input type="search" name="search" placeholder=" " class="block p-2 pl-4 text-lg border-0 focus:ring-0 bg-transparent" />
+          <label for="search" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Search</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
+          <input type="text" list="datalist" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <datalist id="datalist">
+            <option value="One"></option>
+            <option value="Two"></option>
+            <option value="Three"></option>
+          </datalist>
+          <label for="datalist" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Data List</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
+          <input type="text" name="textbox" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <label for="textbox" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Text Box</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
+          <textarea type="password" name="textarea" placeholder=" " class="block p-2 w-full pr-7 pl-4 text-lg border-0 focus:ring-0 bg-transparent"></textarea>
+          <label for="textarea" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Text Area</label>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <form autocomplete="off" class="bg-gray-700 -z-1 max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
+        <h2 class="text-2xl font-bold text-center">Pre-Floated Labels</h2>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
+          <input type="color" name="color" placeholder=" " class="block m-2 h-7 w-full pl-2 pr-6 border-0 focus:ring-0 appearance-none focus:outline-none bg-transparent" />
+          <label for="color" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Color</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
+          <select type="text" name="selectbox" placeholder="986-98265-9865-918346-9" class="block p-4 w-full text-lg border-0 focus:ring-0 bg-transparent">
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Three">Three</option>
+          </select>
+          <label for="selectbox" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Select Box</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
+          <input type="time" name="time" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <label for="time" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0 rounded-full">Time</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
+          <input type="date" name="date" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <label for="date" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0 rounded-full">Date</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
+          <input type="week" name="week" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <label for="datetime" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0 rounded-full">Week</label>
+        </div>
+        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
+          <input type="month" name="month" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <label for="month" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0 rounded-full">Month</label>
+        </div>
+      </form>
+    </div>
   </container>
 
   <form autocomplete="off" class="max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
     <h2 class="text-2xl font-bold text-center">Login</h2>
     <div class="relative border-b-2 focus-within:border-blue-500">
-      <input readonly onfocus="this.removeAttribute('readonly');" type="username" for="username" placeholder=" " class="text-lg block w-full appearance-none focus:outline-none bg-transparent" />
+      <input readonly onfocus="this.removeAttribute('readonly');" type="text" for="username" placeholder=" " class="text-lg block w-full border-0 focus:ring-0 bg-transparent" />
       <label class="absolute top-0 text-lg -z-1 duration-300 origin-0">Username</label>
     </div>
     <div class="relative border-b-2 focus-within:border-blue-500">
-      <input readonly onfocus="this.removeAttribute('readonly');" type="email" name="email" placeholder=" " class="text-lg block w-full appearance-none focus:outline-none bg-transparent" />
+      <input readonly onfocus="this.removeAttribute('readonly');" type="email" name="email" placeholder=" " class="text-lg block w-full border-0 focus:ring-0 bg-transparent" />
       <label class="absolute top-0 text-lg -z-1 duration-300 origin-0">Email</label>
     </div>
     <div class="relative border-b-2 focus-within:border-blue-500">
-      <input oninput="this.type='password'" type="text" name="password" placeholder=" " class="text-lg block w-full appearance-none focus:outline-none bg-transparent" />
+      <input oninput="this.type='password'" type="text" name="password" placeholder=" " class="text-lg block w-full border-0 focus:ring-0 bg-transparent" />
       <label for="password" class="absolute top-0 text-lg -z-1 duration-300 origin-0">Password</label>
     </div>
   </form>
