@@ -14,6 +14,17 @@
       width: 0 !important;
       scrollbar-width: none;
     }
+    /* Show Hide Placeholder text */
+    ::-webkit-input-placeholder {
+      opacity: 0 !important;
+    }
+    .outline:focus-within ::-webkit-input-placeholder {
+      opacity: 1 !important;
+    }
+    /* Force Prefix Postfix Border Change on Focus */
+    .outline:focus-within span  {
+      border-color: blue;
+    }
   </style>
 </head>
 
@@ -25,11 +36,11 @@
       <form autocomplete="off" class="bg-gray-700 -z-1 max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
         <h2 class="text-2xl font-bold text-center">Floating Labels</h2>
         <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-full">
-          <input type="search" name="search" placeholder=" " class="block p-2 pl-4 text-lg border-0 focus:ring-0 bg-transparent" />
+          <input type="search" name="search" placeholder="MongoDB Search" class="block p-2 pl-4 text-lg border-0 focus:ring-0 bg-transparent" />
           <label for="search" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Search</label>
         </div>
         <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
-          <input type="text" list="datalist" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+          <input type="text" list="datalist" placeholder="Pick A Number" class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
           <datalist id="datalist">
             <option value="One"></option>
             <option value="Two"></option>
@@ -37,17 +48,22 @@
           </datalist>
           <label for="datalist" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Data List</label>
         </div>
-        <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg shadow-lg">
-          <input type="text" name="textbox" placeholder=" " class="block p-4 w-full pr-7 text-lg border-0 focus:ring-0 bg-transparent" />
+        <div class="z-10 outline relative focus-within:border-blue-500 border-2 rounded-lg shadow-lg">
+          <span class=" -z-1 absolute -right-0.5 -top-0.5 -bottom-0.5 inline-flex items-center px-3 rounded-r-md border-2 border-gray-300 text-gray-500 sm:text-sm">
+            <svg class="h-5 w-5 text-gray-100" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C5.44772 2 5 2.44772 5 3V4H4C2.89543 4 2 4.89543 2 6V16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16V6C18 4.89543 17.1046 4 16 4H15V3C15 2.44772 14.5523 2 14 2C13.4477 2 13 2.44772 13 3V4H7V3C7 2.44772 6.55228 2 6 2ZM6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H14C14.5523 9 15 8.55228 15 8C15 7.44772 14.5523 7 14 7H6Z" />
+            </svg>
+          </span>
+          <input type="text" name="textbox" placeholder="Text Box with Post-Fix icon" class="placeholder-opacity-0 block p-4 w-full pr-16 text-lg border-0 focus:ring-0 bg-transparent" />
           <label for="textbox" class="absolute top-0 text-lg bg-gray-700 m-4 -z-1 duration-300 origin-0">Text Box</label>
         </div>
         <div class="z-0 outline relative border-2 focus-within:border-blue-500 rounded-lg">
-          <textarea type="password" name="textarea" placeholder=" " class="block p-2 w-full pr-7 pl-4 text-lg border-0 focus:ring-0 bg-transparent"></textarea>
+          <textarea type="password" name="textarea" placeholder="Multi Line Input Field \n Placeholder" class="block p-2 w-full pr-7 pl-4 text-lg border-0 focus:ring-0 bg-transparent"></textarea>
           <label for="textarea" class="absolute top-0 text-lg bg-gray-700 m-2 ml-4 -z-1 duration-300 origin-0 rounded-full">Text Area</label>
         </div>
       </form>
     </div>
-
+    
     <div class="my-5">
       <form autocomplete="off" class="bg-gray-700 -z-1 max-w-sm mx-auto rounded-lg shadow-xl overflow-hidden p-6 space-y-10">
         <h2 class="text-2xl font-bold text-center">Pre-Floated Labels</h2>
